@@ -1,0 +1,169 @@
+@import '../../functions.scss';
+
+.ProductsList {
+	margin-inline: vw(40);
+	margin-bottom: vw(80);
+	margin-top: vw(116);
+	display: flex;
+	flex-direction: column;
+
+	gap: vw(40);
+
+	& > h1 {
+		color: var(--txt-black, #282828);
+		font-family: Montserrat;
+		font-size: vw(64);
+		font-style: normal;
+		font-weight: 700;
+		line-height: vw(70.4); /* 70.4px */
+	}
+}
+
+.Products {
+	gap: vw(32);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.Filter {
+	display: flex;
+	align-items: center;
+	gap: vw(40);
+
+	& > .FilterPrice {
+		display: flex;
+		gap: vw(16);
+		align-items: center;
+		& > label {
+			color: var(--txt-black, #282828);
+			font-family: Montserrat;
+			font-size: vw(20);
+			font-style: normal;
+			font-weight: 600;
+			line-height: vw(26);
+		}
+
+		& > input {
+			width: vw(112);
+			border-radius: var(--radius-small, vw(6));
+			border: vw(1) solid var(--grey-divider, #ddd);
+
+			color: var(--txt-grey, #8b8b8b);
+			font-family: Montserrat;
+			font-size: vw(16);
+			font-style: normal;
+			font-weight: 500;
+			line-height: vw(20.16);
+
+			padding-inline: vw(16);
+			padding-block: vw(8);
+		}
+	}
+
+	& > .FilterDiscounted {
+		& > label {
+			display: flex;
+			gap: vw(16);
+			align-items: center;
+
+			color: var(--txt-black, #282828);
+			font-family: Montserrat;
+			font-size: vw(20);
+			font-style: normal;
+			font-weight: 600;
+			line-height: vw(26);
+
+			& > input {
+				appearance: none;
+				width: vw(36);
+				height: vw(36);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				border-radius: var(--radius-small, vw(6));
+				border: vw(1) solid var(--grey-divider, #ddd);
+
+				transition: 0.3s ease;
+
+				position: relative; /* Для позиционирования псевдоэлемента */
+
+				&:checked {
+					transition: 0.3s ease;
+					border-radius: var(--radius-small, vw(6));
+					background: var(--green, #393);
+
+					&::after {
+						content: '';
+						width: vw(24);
+						height: vw(24);
+
+						position: absolute;
+
+						background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+							no-repeat center center;
+						background-size: contain;
+					}
+				}
+			}
+		}
+	}
+
+	& > .FilterSort {
+		display: flex;
+		gap: vw(16);
+		align-items: center;
+
+		& > label {
+			color: var(--txt-black, #282828);
+			font-family: Montserrat;
+			font-size: vw(20);
+			font-style: normal;
+			font-weight: 600;
+			line-height: vw(26);
+		}
+		& > select {
+			appearance: none;
+			display: flex;
+			width: vw(200);
+
+			color: var(--txt-black, #282828);
+			font-family: Montserrat;
+			font-size: vw(16);
+			font-style: normal;
+			font-weight: 500;
+			line-height: vw(20.16); /* 20.16px */
+
+			border-radius: var(--radius-small, vw(6));
+			padding: vw(8) vw(8) vw(8) vw(16);
+			border: vw(1) solid var(--grey-divider, #ddd);
+
+			&:focus {
+				outline: none;
+			}
+		}
+		& {
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				right: vw(16);
+				top: 50%;
+				transform: translateY(-50%);
+				width: vw(10);
+				height: vw(10);
+				pointer-events: none;
+				background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>')
+					no-repeat center center;
+				background-size: contain;
+				transition: transform 0.3s ease;
+			}
+
+			& > select:focus + &::after {
+				transform: translateY(-50%) rotate(180deg);
+			}
+		}
+	}
+}

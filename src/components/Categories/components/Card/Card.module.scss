@@ -1,0 +1,133 @@
+@import '../../../../functions.scss';
+
+.Card {
+	width: vw(316);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	cursor: pointer;
+
+	gap: vw(16);
+
+	border-radius: vw(16);
+
+	& > img {
+		width: vw(316);
+		height: vw(350);
+		border-radius: vw(16);
+
+		object-fit: cover;
+
+		background: lightgray 50% / cover no-repeat;
+	}
+
+	& > h1 {
+		color: #282828;
+		text-align: center;
+		font-family: 'Montserrat';
+		font-size: vw(20);
+		font-style: normal;
+		font-weight: 500;
+		line-height: vw(26);
+	}
+}
+
+.CardSale {
+	width: vw(316);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	position: relative;
+
+	cursor: pointer;
+
+	gap: vw(16);
+
+	border-radius: vw(16);
+
+	border: vw(1) solid #ddd;
+	overflow: hidden;
+
+	& > img {
+		width: vw(316);
+		height: vw(284);
+		border-bottom: vw(1) solid var(--grey-divider, #ddd);
+		background: lightgray 50% / cover no-repeat;
+
+		object-fit: cover;
+	}
+
+	& > h1 {
+		margin-top: vw(20);
+		margin-inline: vw(32);
+
+		overflow: hidden;
+		color: var(--txt-black, #282828);
+		text-overflow: ellipsis;
+		font-family: Montserrat;
+		font-size: vw(20);
+		font-style: normal;
+		font-weight: 500;
+		line-height: vw(26);
+
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	& > div.CardPrice {
+		display: flex;
+		align-items: flex-end;
+		margin: vw(32);
+		margin-top: 0;
+
+		gap: vw(16);
+
+		& > h1 {
+			color: var(--txt-black, #282828);
+			font-family: 'Montserrat';
+			font-size: vw(40);
+			font-style: normal;
+			font-weight: 600;
+			line-height: vw(44);
+
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		& > p {
+			color: var(--txt-grey, #8b8b8b);
+			font-family: Montserrat;
+			font-size: vw(20);
+			font-style: normal;
+			font-weight: 500;
+			line-height: vw(26);
+			text-decoration-line: strikethrough;
+			text-decoration: line-through;
+		}
+	}
+	& > div.Discount {
+		position: absolute;
+		font-family: Montserrat;
+		color: white;
+		font-size: vw(20);
+		font-style: normal;
+		font-weight: 600;
+		line-height: vw(26);
+		letter-spacing: vw(0.6);
+
+		border-radius: vw(6);
+
+		padding-inline: vw(8);
+		padding-block: vw(4);
+
+		right: vw(16);
+		top: vw(16);
+
+		z-index: 5;
+		background: var(--green, #393);
+	}
+	
+}

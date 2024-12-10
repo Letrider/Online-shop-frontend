@@ -1,0 +1,65 @@
+@import '../../functions.scss';
+.Sale {
+	width: 100vw;
+	color: white;
+	height: vw(486);
+	background: linear-gradient(261deg, #0b710b 32.63%, #393 98.96%);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	padding: vw(32);
+	padding-bottom: vw(0);
+
+	margin-bottom: vw(80);
+
+	& > h1 {
+		text-align: center;
+		font-family: Montserrat;
+		font-size: vh(64);
+		font-style: normal;
+		font-weight: 700;
+		line-height: vh(70.4);
+	}
+	& > .container {
+		display: flex;
+		justify-content: space-between;
+
+		& > img {
+			width: vw(748);
+			height: vw(360);
+		}
+
+		& > form.inputsContainer {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			width: vw(452);
+			gap: vw(16);
+
+			& > button {
+				margin-top: vw(20);
+			}
+
+			& > .Input {
+				width: 100%;
+				height: vw(56);
+				padding-inline: vw(32);
+				border: vw(1) solid var(--white, #fff);
+				border-radius: vw(6);
+
+				color: var(--txt-white, #fff);
+				font-family: Montserrat;
+				font-size: vw(20);
+				font-style: normal;
+				font-weight: 500;
+				line-height: vw(26); /* 26px */
+
+				&::placeholder {
+					color: white;
+				}
+			}
+		}
+	}
+}

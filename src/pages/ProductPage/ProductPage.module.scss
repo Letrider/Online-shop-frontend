@@ -1,0 +1,146 @@
+@import '../../functions.scss';
+
+.ProductPage {
+	display: flex;
+	flex-direction: column;
+
+	& > .Product {
+		padding-inline: vw(35);
+		display: flex;
+		justify-content: space-between;
+
+		margin-top: vw(116);
+
+		margin-bottom: vw(40);
+
+		gap: vw(32);
+
+		& > img {
+			width: vw(740);
+			height: vw(572);
+			border-radius: var(--radius-big, vw(12));
+
+			object-fit: cover;
+		}
+
+		& > .ProductInfo {
+			display: flex;
+			flex-direction: column;
+			width: vw(548);
+
+			gap: vw(32);
+
+			& > h1 {
+				color: var(--txt-black, #282828);
+				font-family: Montserrat;
+				font-size: vw(40);
+				font-style: normal;
+				font-weight: 700;
+				line-height: vw(44);
+				letter-spacing: vw(1.2);
+			}
+
+			& > .ProductPrice {
+				display: flex;
+				justify-content: flex-start;
+				align-items: flex-end;
+
+				& > h1 {
+					color: var(--txt-black, #282828);
+					font-family: Montserrat;
+					font-size: vw(64);
+					font-style: normal;
+					font-weight: 700;
+					line-height: vw(70.4);
+
+					margin-right: vw(32);
+				}
+
+				& > p {
+					color: var(--txt-grey, #8b8b8b);
+					font-family: Montserrat;
+					font-size: vw(40);
+					font-style: normal;
+					font-weight: 500;
+					line-height: vw(52);
+					text-decoration-line: strikethrough;
+					text-decoration: line-through;
+
+					margin-right: vw(16);
+				}
+
+				& > div.Discount {
+					height: 100%;
+					float: right;
+
+					& > div {
+						color: var(--txt-white, #fff);
+						font-family: Montserrat;
+						font-size: vw(20);
+						font-style: normal;
+						font-weight: 600;
+						line-height: vw(26);
+						letter-spacing: vw(0.6);
+
+						border-radius: var(--radius-small, vw(6));
+						background: var(--green, #393);
+
+						padding: vw(4) vw(8);
+					}
+				}
+			}
+
+			& > .AddToCart {
+				display: flex;
+				gap: vw(32);
+
+				& > div.Input {
+					width: vw(200);
+				}
+			}
+			& > .Description {
+				display: flex;
+				flex-direction: column;
+				gap: vw(32);
+
+				& > h1 {
+					color: var(--txt-black, #282828);
+					font-family: Montserrat;
+					font-size: vw(20);
+					font-style: normal;
+					font-weight: 600;
+					line-height: vw(26); /* 26px */
+				}
+				& > p {
+					overflow: hidden;
+					color: var(--txt-black, #282828);
+					text-overflow: ellipsis;
+					font-family: Montserrat;
+					font-size: vw(16);
+					font-style: normal;
+					font-weight: 400;
+					line-height: vw(20.8); /* 20.8px */
+				}
+
+				& > .ReadMore {
+					color: var(--txt-black, #282828);
+					font-family: Montserrat;
+					font-size: vw(16);
+					font-style: normal;
+					font-weight: 500;
+					line-height: vw(20.8); /* 20.8px */
+
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+
+.LoadImage {
+	width: vw(740);
+	height: vw(572);
+
+	background-color: #222;
+	border-radius: var(--radius-big, vw(12));
+}

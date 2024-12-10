@@ -1,0 +1,45 @@
+@import '../../functions.scss';
+
+.Categories {
+	display: flex;
+	flex-direction: column;
+	gap: vw(40);
+
+	padding-inline: vw(40);
+	width: 100%;
+	// height: vw(528);
+
+	margin-bottom: vw(80);
+
+	& > div.CategoriesHeader {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		& > h1 {
+			font-family: Montserrat;
+			font-size: vw(64);
+			font-style: normal;
+			font-weight: 700;
+			line-height: vw(70.4);
+		}
+
+		& > .Right {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			width: 100%;
+			& > .Line {
+				width: 80%;
+				height: vw(1);
+				background: #ddd;
+			}
+		}
+	}
+
+	& > .CardsList {
+		display: flex;
+		flex-wrap: wrap;
+		gap: vw(32);
+	}
+}

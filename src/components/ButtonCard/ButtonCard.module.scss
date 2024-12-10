@@ -1,0 +1,52 @@
+@import '../../functions.scss';
+
+.ButtonCard {
+	width: 100%;
+	height: vw(58);
+
+	position: relative;
+	z-index: 1;
+
+	border-radius: vw(6);
+
+	color: #fff;
+	text-align: center;
+	font-family: Montserrat;
+	font-size: vw(20);
+	font-style: normal;
+	font-weight: 600;
+	line-height: vw(26);
+	transition: 0.3s ease;
+}
+
+.Primary {
+	background-color: #339933;
+
+	&:hover {
+		transition: 0.3s ease;
+		background: var(--black, #282828);
+		color: white;
+	}
+}
+
+.Secondary {
+	background: var(--black, #282828);
+
+	&:hover {
+		transition: 0.3s ease;
+		background: var(--black, #282828);
+		color: white;
+	}
+}
+
+.Discount {
+	border: vw(1) solid var(--black, #282828);
+	background: var(--white, #fff);
+	color: #282828;
+
+	&:hover {
+		transition: 0.3s ease;
+		background: var(--black, #282828);
+		color: white;
+	}
+}

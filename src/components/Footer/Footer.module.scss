@@ -1,0 +1,68 @@
+@import '../../functions.scss';
+
+.Footer {
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+
+	padding-inline: vw(32);
+	padding-bottom: vw(80);
+	& > h1 {
+		color: var(--txt-black, #282828);
+		font-family: Montserrat;
+		font-size: vw(64);
+		font-style: normal;
+		font-weight: 700;
+		line-height: vw(70.4);
+
+		margin-bottom: vw(40);
+	}
+
+	& > .GridComplex {
+		display: grid;
+		grid-template-columns: vw(780) vw(548);
+		gap: vw(40);
+
+		margin-bottom: vw(32);
+
+		& > .GridItem {
+			display: flex;
+			flex-direction: column;
+			gap: vw(16);
+			border-radius: var(--radius-big, vw(12));
+			background: var(--light-grey, #f1f3f4);
+			padding: vw(32);
+
+			& > .Socials {
+				display: flex;
+				gap: vw(16);
+			}
+
+			& > p {
+				color: var(--txt-grey, #8b8b8b);
+				font-family: Montserrat;
+				font-size: vw(20);
+				font-style: normal;
+				font-weight: 500;
+				line-height: vw(26); /* 26px */
+			}
+
+			& > h1 {
+				color: var(--txt-black, #282828);
+				font-family: Montserrat;
+				font-size: vw(40);
+				font-style: normal;
+				font-weight: 600;
+				line-height: vw(44); /* 44px */
+			}
+		}
+	}
+
+	.Map {
+		border-radius: vw(12);
+		width: 100%;
+		height: vw(350);
+		overflow: hidden;
+	}
+}

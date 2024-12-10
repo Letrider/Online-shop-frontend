@@ -1,0 +1,28 @@
+@import '../../functions.scss';
+
+.ButtonNavigation {
+	cursor: pointer;
+	padding-inline: vw(16);
+	padding-block: vw(8);
+
+	border-radius: var(--radius-small, vw(6));
+	border: vw(1) solid var(--grey-divider, #ddd);
+
+	color: var(--txt-grey, #8b8b8b);
+	text-align: center;
+	font-family: Montserrat;
+	font-size: vw(16);
+	font-style: normal;
+	font-weight: 500;
+	line-height: vw(20.16);
+
+	transition: 0.3s ease;
+
+	&:hover {
+		transition: 0.3s ease;
+
+		border-radius: var(--radius-small, vw(6));
+		border: vw(1) solid var(--grey-divider, #ddd);
+		background: var(--light-grey, #f1f3f4);
+	}
+}

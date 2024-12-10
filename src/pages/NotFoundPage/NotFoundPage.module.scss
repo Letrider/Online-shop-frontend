@@ -1,0 +1,52 @@
+@import '../../functions.scss';
+.NotFoundPage {
+	display: flex;
+	flex-direction: column;
+
+	& > .NotFound {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		margin-block: vw(80);
+
+		gap: vw(32);
+
+		& > .FourZeroFour {
+			width: vw(690);
+			height: vw(270);
+		}
+
+		& > .TextContainer {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: vw(16);
+
+			& > h1 {
+				color: var(--txt-black, #282828);
+				text-align: center;
+				font-family: Montserrat;
+				font-size: vw(64);
+				font-style: normal;
+				font-weight: 700;
+				line-height: vw(70.4); /* 70.4px */
+			}
+
+			& > p {
+				width: vw(600);
+				color: var(--txt-grey, #8b8b8b);
+				text-align: center;
+				font-family: Montserrat;
+				font-size: vw(20);
+				font-style: normal;
+				font-weight: 500;
+				line-height: vw(26); /* 26px */
+			}
+		}
+
+		& > .ButtonContainer {
+			width: vw(209);
+		}
+	}
+}

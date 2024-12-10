@@ -1,0 +1,318 @@
+@import '../../functions.scss';
+.CartPage {
+	display: flex;
+	flex-direction: column;
+
+	& > .CartHeader {
+		margin-top: vw(40);
+		padding-inline: vw(35);
+		margin-bottom: vw(40);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		width: 100%;
+
+		& > h1 {
+			min-width: vw(500);
+			color: var(--txt-black, #282828);
+			font-family: Montserrat;
+			font-size: vw(64);
+			font-style: normal;
+			font-weight: 700;
+			line-height: vw(70.4);
+		}
+
+		& > .Right {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			width: 100%;
+
+			& > .Line {
+				width: 80%;
+				height: vw(1);
+
+				background: #ddd;
+			}
+		}
+	}
+	& > .Cart {
+		display: flex;
+		padding-inline: vw(35);
+
+		gap: vw(40);
+
+		margin-bottom: vw(96);
+
+		& > .EmptyCart {
+			display: flex;
+			flex-direction: column;
+			gap: vw(32);
+
+			& > p {
+				overflow: hidden;
+				color: var(--txt-black, #282828);
+				text-overflow: ellipsis;
+				font-family: Montserrat;
+				font-size: vw(20);
+				font-style: normal;
+				font-weight: 500;
+				line-height: vw(26);
+			}
+
+			& > div {
+				& > button {
+					color: var(--txt-white, #fff);
+					width: vw(300);
+
+					text-align: center;
+					font-family: Montserrat;
+					font-size: vw(20);
+					font-style: normal;
+					font-weight: 600;
+					line-height: vw(26);
+
+					padding: vw(8) vw(16);
+				}
+			}
+		}
+
+		& > .CartItems {
+			display: flex;
+			flex-direction: column;
+
+			gap: vw(16);
+
+			& > .CartItem {
+				display: flex;
+				// justify-content: space-between;
+
+				position: relative;
+
+				gap: vw(32);
+
+				width: vw(780);
+
+				border-radius: var(--radius-big, vw(12));
+				border: vw(1) solid var(--grey-divider, #ddd);
+
+				overflow: hidden;
+
+				& > img {
+					width: vw(200);
+					height: vw(180);
+
+					border-right: vw(1) solid var(--grey-divider, #ddd);
+
+					object-fit: cover;
+
+					cursor: pointer;
+				}
+
+				& > .ItemInfo {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					padding: vw(32);
+					padding-left: vw(0);
+
+					& > div.ItemHeader {
+						width: 100%;
+						display: flex;
+						justify-content: space-between;
+						& > h1 {
+							overflow: hidden;
+							color: var(--txt-black, #282828);
+							text-overflow: ellipsis;
+							font-family: Montserrat;
+							font-size: vw(20);
+							font-style: normal;
+							font-weight: 500;
+							line-height: vw(26);
+						}
+						& > .Delete {
+							width: vw(24);
+							height: vw(24);
+
+							cursor: pointer;
+
+							background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18" stroke="%23282828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 6L18 18" stroke="%23282828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+								no-repeat center center;
+						}
+					}
+
+					& > .CounterContainer {
+						display: flex;
+						align-items: flex-end;
+
+						& > h1 {
+							color: var(--txt-black, #282828);
+							font-family: Montserrat;
+							font-size: vw(40);
+							font-style: normal;
+							font-weight: 600;
+							line-height: vw(44);
+
+							margin-left: vw(32);
+							margin-right: vw(16);
+						}
+						& > p {
+							color: var(--txt-grey, #8b8b8b);
+							font-family: Montserrat;
+							font-size: vw(20);
+							font-style: normal;
+							font-weight: 500;
+							line-height: vw(26); /* 26px */
+							text-decoration-line: strikethrough;
+							text-decoration: line-through;
+						}
+					}
+				}
+			}
+		}
+		& > .CartSummary {
+			display: flex;
+			flex-direction: column;
+			width: vw(548);
+			padding: vw(32);
+
+			border-radius: var(--radius-big, vw(12));
+			background: var(--light-grey, #f1f3f4);
+
+			& > .inputsContainer {
+				display: flex;
+				flex-direction: column;
+				gap: vw(16);
+
+				& > .Input {
+					width: 100%;
+					height: vw(56);
+					padding-inline: vw(32);
+					border-radius: var(--radius-small, vw(6));
+					border: vw(1) solid var(--grey-divider, #ddd);
+					background: var(--white, #fff);
+
+					color: var(--txt-grey, #8b8b8b);
+					font-family: Montserrat;
+					font-size: vw(20);
+					font-style: normal;
+					font-weight: 500;
+					line-height: vw(26); /* 26px */
+
+					&::placeholder {
+						color: #8b8b8b;
+					}
+				}
+			}
+
+			& > h1 {
+				color: var(--txt-black, #282828);
+				font-family: Montserrat;
+				font-size: vw(40);
+				font-style: normal;
+				font-weight: 700;
+				line-height: vw(44);
+
+				margin-bottom: vw(24);
+			}
+
+			& > p {
+				color: var(--txt-grey, #8b8b8b);
+				font-family: Montserrat;
+				font-size: vw(40);
+				font-style: normal;
+				font-weight: 500;
+				line-height: vw(52); /* 52px */
+			}
+
+			& > .Container {
+				display: flex;
+				align-items: flex-end;
+				justify-content: space-between;
+
+				margin-bottom: vw(32);
+
+				& > p {
+					color: var(--txt-grey, #8b8b8b);
+					font-family: Montserrat;
+					font-size: vw(40);
+					font-style: normal;
+					font-weight: 500;
+					line-height: vw(52); /* 52px */
+				}
+
+				& > h1 {
+					color: var(--txt-black, #282828);
+					font-family: Montserrat;
+					font-size: vw(64);
+					font-style: normal;
+					font-weight: 700;
+					line-height: vw(70.4); /* 70.4px */
+				}
+			}
+		}
+	}
+}
+
+.ModalOverlay {
+	position: fixed;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	z-index: 100;
+
+	background: rgba(40, 40, 40, 0.4);
+
+	width: 100vw;
+	height: 100vh;
+
+	& > .ModalContent {
+		width: vw(548);
+		padding: vw(32);
+
+		position: relative;
+
+		display: flex;
+		flex-direction: column;
+		gap: vw(24);
+
+		border-radius: var(--radius-big, vw(12));
+		background: var(--green, #393);
+
+		& > h1 {
+			color: var(--txt-white, #fff);
+			font-family: Montserrat;
+			font-size: vw(40);
+			font-style: normal;
+			font-weight: 600;
+			line-height: vw(44); /* 44px */
+		}
+
+		& > p {
+			color: var(--txt-white, #fff);
+			font-family: Montserrat;
+			font-size: vw(20);
+			font-style: normal;
+			font-weight: 600;
+			line-height: vw(22); /* 22px */
+		}
+
+		& > .Exit {
+			position: absolute;
+
+			right: vw(32);
+
+			cursor: pointer;
+
+			width: vw(44);
+			height: vw(44);
+			background: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" fill="none"><path d="M33 11L11 33" stroke="white" stroke-width="3.66667" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 11L33 33" stroke="white" stroke-width="3.66667" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+				no-repeat center center;
+			background-size: contain;
+		}
+	}
+}

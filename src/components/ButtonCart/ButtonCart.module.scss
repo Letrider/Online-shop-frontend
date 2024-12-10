@@ -1,0 +1,33 @@
+@import '../../functions.scss';
+
+.ButtonCart {
+	width: vw(48);
+	height: vw(48);
+
+	position: relative;
+
+	cursor: pointer;
+
+	& > .Current {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: vw(100);
+
+		color: var(--white, #fff);
+		text-align: center;
+		font-family: Montserrat;
+		font-size: vw(12);
+		font-style: normal;
+		font-weight: 600;
+		line-height: vw(10.8);
+
+		position: absolute;
+		width: vw(26);
+		height: vw(26);
+		content: '';
+		background-color: #339933;
+		color: white;
+		top: 0;
+	}
+}

@@ -1,0 +1,74 @@
+@import '../../functions.scss';
+
+.InputCounter {
+	display: flex;
+	justify-content: space-between;
+	gap: vw(84);
+	width: vw(200);
+	height: vw(58);
+	border-radius: var(--radius-small, vw(6));
+
+	position: relative;
+
+	& > button.Button {
+		position: relative;
+
+		z-index: 5;
+
+		min-width: vw(58);
+		min-height: vw(58);
+
+		cursor: pointer;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		border-radius: var(--radius-small, vw(6));
+		border: vw(1) solid var(--grey-divider, #ddd);
+
+		&:first-child::before {
+			width: vw(24);
+			height: vw(24);
+
+			cursor: pointer;
+
+			content: '';
+
+			background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M5 12H19" stroke="%238B8B8B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+				no-repeat center center;
+			background-size: contain;
+		}
+
+		&:last-child::before {
+			content: '';
+			width: vw(24);
+			height: vw(24);
+
+			background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12H19" stroke="%238B8B8B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5V19" stroke="%238B8B8B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+				no-repeat center center;
+			background-size: contain;
+		}
+	}
+
+	& > div {
+		width: vw(200);
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: var(--radius-small, vw(6));
+		border: vw(1) solid var(--grey-divider, #ddd);
+
+		color: var(--txt-black, #282828);
+		text-align: center;
+
+		font-family: Montserrat;
+		font-size: vw(20);
+		font-style: normal;
+		font-weight: 600;
+		line-height: vw(26);
+
+		position: absolute;
+	}
+}

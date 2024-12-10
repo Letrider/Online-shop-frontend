@@ -1,0 +1,18 @@
+@import '../../functions.scss';
+
+.NavLink {
+	cursor: pointer;
+	color: #282828;
+	font-family: Montserrat;
+	font-size: vw(20);
+	font-style: normal;
+	font-weight: 500;
+	line-height: vw(26); /* 26px */
+}
+
+.Title {
+	cursor: pointer;
+	&:hover {
+		color: #339933;
+	}
+}

@@ -1,0 +1,21 @@
+@import '../../functions.scss';
+
+.Navigation {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	width: '100%';
+	height: vw(128);
+
+	padding-inline: vw(40);
+
+	background-color: white;
+	border-bottom: vw(1) solid var(--grey-divider, #ddd);
+}
+
+.LinksList {
+	display: flex;
+
+	gap: vw(32);
+}

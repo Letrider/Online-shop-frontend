@@ -28,14 +28,5 @@ export const SaleWidget = () => {
 		</div>
 	)
 }
+const Input = ({ placeholder, register, type }) => <input type={type} {...register(placeholder.toLowerCase())} className={cn.Input} placeholder={placeholder} />
 
-const Input = ({ placeholder, register, type }) => {
-	return (
-		<input
-			type={type}
-			{...register(placeholder.toLowerCase())}
-			className={cn.Input}
-			placeholder={placeholder}
-		/>
-	)
-}
